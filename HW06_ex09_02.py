@@ -14,10 +14,39 @@
 
 # Body
 
+def has_no_e_old(word):
+	
+	if ('e' in word or 'E' in word):
+		return False
+
+	return True
+
+def has_no_e(listOfWords):
+	lengthOfList = len(listOfWords)
+
+	count = 0
+
+	for word in listOfWords:
+		if(has_no_e_old(word.strip())):
+			print (word.strip() +"\n")
+			count += 1
+
+	print ("Count of numbers without 'e' : "+repr(count))
+	print ("Total number of words : "+repr(lengthOfList))
+	print ("percentage of words that have no 'e' : "+repr((float(count)/lengthOfList) * 100) +"%")
+
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+    print ("9.1")
+    has_no_e_old("Ankur")
+    print
+    print
+
+    print("9.2")
+    has_no_e("This is a sentence to test the second problem which prints words with no 'e'".split())
+
+
 
 if __name__ == '__main__':
     main()
